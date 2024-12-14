@@ -1,0 +1,189 @@
+/* General Reset */
+body, h1, h2, h3, p, img, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f8fb;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+/* About Section */
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: #eaf4fc;
+    border-bottom: 2px solid #d1e7f8;
+}
+
+.about-section img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-section .info {
+    max-width: 600px;
+}
+
+.about-section h2 {
+    color: #0056b3;
+    margin-bottom: 0.5rem;
+}
+
+.about-section .social-icons a {
+    text-decoration: none;
+    color: #0056b3;
+    margin-right: 1rem;
+    transition: color 0.3s;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.about-section .social-icons a:hover {
+    color: #003c80;
+}
+
+/* Quote Container Styling */
+.quote-container {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: #f4f8fb;
+    border-left: 4px solid #0056b3;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+}
+
+.quote-container .quote {
+    margin: 0;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #333;
+    line-height: 1.6;
+}
+
+.quote-container .quote-author {
+    display: block;
+    text-align: right;
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #555;
+}
+
+
+/* Study Section */
+.study-section {
+    flex: 1;
+    padding: 2rem;
+}
+
+.study-section h2 {
+    color: #0056b3;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+.study-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.study-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s;
+    padding-top: 2.5rem; /* Added space for category label */
+}
+
+.study-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Category Label */
+.category-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px 15px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #fff;
+    background: #00a8e8; /* Default background for Mathematics */
+    border-radius: 15px 0 15px 0; /* Matches the card's rounded top-left corner */
+    z-index: 1;
+}
+
+.category-math {
+    background: #00a8e8; /* Subtle blue for Mathematics */
+}
+
+.category-cs {
+    background: #ff6f61; /* Subtle coral for Computer Science */
+}
+
+.study-card .content {
+    display: flex; /* Enables flexbox */
+    align-items: center; /* Vertically centers the items */
+    justify-content: space-between; /* Spreads the title and semester circle */
+    padding: 1rem;
+    position: relative; /* Ensures proper positioning for absolute elements */
+}
+
+.study-card .content h3 {
+    margin: 0; /* Removes default margins */
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: left;
+    word-wrap: break-word; /* Ensures long titles wrap instead of overlapping */
+    margin-right: 2.5rem; /* Adds spacing to prevent overlapping with the semester circle */
+}
+
+.study-card .semester {
+    position: absolute;
+    top: 50%; /* Centers vertically within the card */
+    right: 10px; /* Aligns to the right */
+    transform: translateY(-50%); /* Adjusts for vertical centering */
+    background: #0056b3;
+    color: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center; /* Centers text inside the circle */
+    justify-content: center; /* Centers text inside the circle */
+    font-size: 0.8rem;
+    z-index: 1; /* Ensures it stays above content */
+}
+
+/* Make the card clickable */
+.card-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
