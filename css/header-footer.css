@@ -32,6 +32,17 @@ header h1 span {
     margin-left: 0.5rem; /* Adds slight spacing between the name and "Study Hub" */
 }
 
+.header-link {
+    color: inherit; /* Inherit color from the header (white) */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.header-link:hover {
+    color: #ffcc00; /* Highlight the title when hovered */
+}
+
+
 footer {
     background: #0056b3;
     color: #fff;
