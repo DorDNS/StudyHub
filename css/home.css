@@ -28,7 +28,8 @@ body {
     border-bottom: 2px solid #d1e7f8;
 }
 
-.about-section img {
+/* Profile photo styling (specific) */
+.profile-photo {
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -36,27 +37,33 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+
 .about-section .info {
     max-width: 600px;
 }
 
-.about-section h2 {
-    color: #0056b3;
-    margin-bottom: 0.5rem;
+/* Social Icons Container */
+.social-icons {
+    display: flex;
+    gap: 1rem; /* Space between icons */
+    margin-top: 1rem;
 }
 
-.about-section .social-icons a {
-    text-decoration: none;
-    color: #0056b3;
-    margin-right: 1rem;
-    transition: color 0.3s;
-    font-size: 1rem;
-    font-weight: 500;
+/* Social Icon Images */
+.social-icon {
+    width: 30px; /* Fixed width */
+    height: 30px; /* Fixed height */
+    object-fit: contain; /* Ensure the content fits inside the square */
+    background: transparent; /* Ensure no background styling is applied */
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.about-section .social-icons a:hover {
-    color: #003c80;
+/* Hover Effect */
+.social-icon:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+    filter: brightness(1.2);
 }
+
 
 /* Quote Container Styling */
 .quote-container {
@@ -163,19 +170,19 @@ body {
 
 .study-card .semester {
     position: absolute;
-    top: 50%; /* Centers vertically within the card */
-    right: 10px; /* Aligns to the right */
-    transform: translateY(-50%); /* Adjusts for vertical centering */
+    top: 10px; /* Distance from the top of the card */
+    right: 10px; /* Distance from the right edge of the card */
     background: #0056b3;
     color: #fff;
     border-radius: 50%;
     width: 40px;
     height: 40px;
     display: flex;
-    align-items: center; /* Centers text inside the circle */
-    justify-content: center; /* Centers text inside the circle */
+    align-items: center;
+    justify-content: center;
     font-size: 0.8rem;
-    z-index: 1; /* Ensures it stays above content */
+    font-weight: bold;
+    z-index: 2; /* Ensures it stays on top */
 }
 
 /* Make the card clickable */
