@@ -151,6 +151,14 @@ body {
     background: #ff6f61; /* Subtle coral for Computer Science */
 }
 
+.category-phy {
+    background: #ffcc00; /* Subtle yellow for Physics */
+}
+
+.category-gf {
+    background: #c083d8; /* Subtle violet for General Formation */
+}
+
 .study-card .content {
     display: flex; /* Enables flexbox */
     align-items: center; /* Vertically centers the items */
