@@ -1,0 +1,102 @@
+/* General Reset */
+body, h1, h2, h3, p, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9; /* Light background for clarity */
+    margin: 0;
+}
+
+/* Section */
+.study-section {
+    padding: 2rem;
+}
+
+.study-section h2 {
+    color: #0056b3;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+/* Cheat Sheet Cards */
+.study-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive design */
+    gap: 1.5rem;
+}
+
+.study-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    padding: 1rem;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.study-card .card-link {
+    position: absolute; /* Absolutely position the link inside the card */
+    top: 0;
+    left: 0;
+    width: 100%; /* Cover the full width of the card */
+    height: 100%; /* Cover the full height of the card */
+    z-index: 2; /* Ensure it sits above the content */
+    text-decoration: none; /* Remove any default link styling */
+    background: transparent; /* Keep the background transparent */
+}
+
+.study-card:hover {
+    transform: translateY(-10px); /* Elevates the card on hover */
+}
+
+/* Cheat Sheet Card Content */
+.study-card .content {
+    padding: 1rem; /* Maintain original padding */
+    text-align: left; /* Keep text aligned to the left */
+    position: relative; /* Allows for precise positioning */
+    height: 100%; /* Ensure it fills the card without altering height */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Start positioning from the top */
+}
+
+/* Title */
+.study-card .content h3 {
+    margin: 1.5rem 0 0.5rem 0; /* Slightly increase top margin to move it down */
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #0056b3;
+}
+
+/* Subtitle */
+.study-card .content h3 span {
+    font-size: 1rem;
+    font-weight: normal;
+    color: #555;
+    line-height: 1.5; /* Keep consistent spacing for readability */
+    margin-bottom: 0; /* No extra space below the subtitle */
+}
+
+/* Cheat Sheet Category Label */
+.category-label {
+    background: #00a8e8; /* Blue color for Cheat Sheets */
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 5px 15px;
+    border-radius: 10px 0 10px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
