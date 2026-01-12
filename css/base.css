@@ -1,3 +1,10 @@
+/* Global Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 :root {
     /* Color Palette */
     --primary-color: #0056b3;
@@ -19,7 +26,6 @@ html,
 body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: var(--font-main);
     line-height: 1.6;
     color: var(--text-color);
@@ -125,13 +131,14 @@ a:hover {
     /* Ensures long titles wrap instead of overlapping */
     color: var(--text-color);
     line-height: 1.4;
-    padding-right: 1rem;
+    padding-right: 2.5rem;
+    /* Make space for the semester badge */
 }
 
 .study-card .semester {
     position: absolute;
     top: 1rem;
-    right: 1rem;
+    right: 1.5rem;
     background: rgba(0, 86, 179, 0.1);
     color: var(--primary-color);
     border-radius: 50%;
@@ -144,6 +151,39 @@ a:hover {
     font-weight: 700;
     z-index: 2;
     /* Ensures it stays on top */
+}
+
+/* Response Images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 550px) {
+
+    /* Increased breakpoint for better safety */
+    .study-cards {
+        grid-template-columns: 1fr;
+        /* Force single column on smaller screens */
+        gap: 1.5rem;
+        padding-right: 5px;
+        /* Prevention of edge touching */
+    }
+
+    .category-label {
+        font-size: 0.65rem;
+        padding: 3px 10px;
+    }
+
+    .study-card .semester {
+        width: 30px;
+        height: 30px;
+        font-size: 0.7rem;
+        top: 0.8rem;
+        /* Slight adjustment */
+        right: 0.8rem;
+    }
 }
 
 /* Make the card clickable */
